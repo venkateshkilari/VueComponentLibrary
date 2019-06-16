@@ -1,0 +1,33 @@
+{
+  "name": "form-widget-library",
+  "version": "1.0.0",
+  "description": "library plugin for all form related components",
+  "main": "dist/form-widget-library.umd.js",
+  "module": "dist/form-widget-library.esm.js",
+  "unpkg": "dist/form-widget-library.min.js",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup  --config build/rollup.config.js --format umd --file dist/form-widget-library.umd.js",
+    "build:es": "rollup  --config build/rollup.config.js --format es --file dist/form-widget-library.esm.js",
+    "build:unpkg": "rollup  --config build/rollup.config.js --format iife --file dist/form-widget-library.min.js"
+  },
+  "keywords": [
+    "Vue",
+    "form",
+    "components"
+  ],
+  "author": "Venkatesh Kilari",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^3.8.4",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.23",
+    "lodash": "^4.17.11",
+    "rollup": "^1.15.5",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-vue": "^5.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
